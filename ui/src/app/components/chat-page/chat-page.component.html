@@ -1,0 +1,42 @@
+<mat-sidenav-container *ngIf="user" class="chat-page__container">
+  <mat-sidenav [opened]="isCollapsed" mode="side" class="chat-page__sidenav">
+    <div class="chat-page__sidenav-content-container">
+      <div class="chat-page__sidenav-header">
+        <button
+          mat-icon-button
+          class="favorite-icon"
+          aria-label="Add conversation"
+          (click)="addConversation()"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <div class="chat-page__sidenav-conversations">
+        <app-chat-conversations></app-chat-conversations>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content class="chat-page__sidenav-container">
+    <mat-toolbar class="chat-page__sidenav-toolbar">
+      <button mat-icon-button aria-label="Menu icon" (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Chat GPT</h1>
+
+      <span class="chat-page__sidenav-toolbar-spacer"></span>
+
+      <span>{{ user.username }}</span>
+      <button
+        mat-icon-button
+        class="favorite-icon"
+        aria-label="Logout"
+        (click)="logOut()"
+      >
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+    <div class="chat-page__sidenav-content">
+      <app-chat-dialog></app-chat-dialog>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

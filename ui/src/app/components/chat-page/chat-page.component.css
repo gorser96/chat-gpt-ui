@@ -1,0 +1,49 @@
+.chat-page__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-page__sidenav {
+  border-radius: 0;
+  background-color: lightgray;
+  max-width: 25%;
+}
+
+.chat-page__sidenav-content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-page__sidenav-header {
+  padding: 1rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.chat-page__sidenav-conversations {
+  padding: 1rem 0 1rem 1rem;
+  overflow-y: scroll;
+}
+
+.chat-page__sidenav-toolbar {
+  background-color: lightgray;
+}
+
+.chat-page__sidenav-toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.chat-page__sidenav-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-page__sidenav-content {
+  overflow-y: scroll;
+  padding: 1rem 0 1rem 1rem;
+}
